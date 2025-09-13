@@ -12,15 +12,9 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif; 
     }
-    body { 
-      background: #fdfdfd; 
-      color: #222; 
-    }
-    a { 
-      text-decoration: none;
-      color: inherit;
-    }
-    img { max-width: 100%; border-radius: 12px; }
+    body { background: #fdfdfd; color: #222; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; border-radius: 12px; height: auto; }
 
     /* ===== Welcome Page ===== */
     #welcome {
@@ -31,37 +25,29 @@
       flex-direction: column; z-index: 9999;
       transition: opacity 1s ease-out;
       text-align: center;
+      padding: 20px;
     }
-    #welcome h1 { font-size: 3rem; color: #004a7c; margin-bottom: 20px; }
+    #welcome h1 { font-size: 2.2rem; color: #004a7c; margin-bottom: 20px; }
     #enterBtn {
       padding: 12px 30px; border: none; cursor: pointer;
-      font-size: 1.2rem; border-radius: 30px;
+      font-size: 1rem; border-radius: 30px;
       background: #007bff; color: #fff;
       transition: 0.3s;
       margin-bottom: 20px;
     }
     #enterBtn:hover { background: #0056b3; }
-
-    /* Social & Certificate links in welcome */
     .welcome-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 10px;
+      display: flex; flex-direction: column; gap: 12px;
+      margin-top: 10px; width: 100%; max-width: 300px;
     }
     .welcome-links a {
-      padding: 10px 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      color: #007bff;
-      font-weight: 500;
-      transition: 0.3s;
+      padding: 10px 20px; background: #fff;
+      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      color: #007bff; font-weight: 500; transition: 0.3s;
+      text-align: center;
     }
     .welcome-links a:hover {
-      background: #007bff;
-      color: #fff;
-      transform: translateY(-3px);
+      background: #007bff; color: #fff; transform: translateY(-3px);
     }
 
     /* ===== Navbar ===== */
@@ -69,134 +55,96 @@
       position: fixed; top: 0; width: 100%; z-index: 1000;
       background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       display: flex; justify-content: space-between; align-items: center;
-      padding: 15px 10%;
+      padding: 12px 8%;
     }
     header h2 { color: #007bff; }
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-    nav a {
-      margin: 0 10px; color: #222; font-weight: 500;
-      transition: 0.3s;
-    }
+    nav { display: flex; gap: 15px; }
+    nav a { margin: 0 10px; color: #222; font-weight: 500; transition: 0.3s; }
     nav a:hover { color: #007bff; }
-
-    /* Hamburger (3 dots) */
     .menu-toggle {
-      display: none;
-      font-size: 2rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      color: #007bff;
+      display: none; font-size: 2rem; cursor: pointer;
+      background: none; border: none; color: #007bff;
     }
 
     /* ===== Hero Section ===== */
     #home {
-      height: 100vh; display: flex; align-items: center; justify-content: space-between;
-      padding: 0 10%; background: linear-gradient(to right, #eafcff, #fff);
+      min-height: 100vh; display: flex; align-items: center; justify-content: space-between;
+      padding: 80px 10% 40px; background: linear-gradient(to right, #eafcff, #fff);
+      gap: 20px; flex-wrap: wrap;
     }
-    #home .text { max-width: 50%; }
-    #home h1 { font-size: 2.5rem; margin-bottom: 15px; }
+    #home .text { flex: 1; min-width: 280px; }
+    #home h1 { font-size: 2rem; margin-bottom: 15px; }
     #home h2 span { color: #007bff; border-right: 2px solid #007bff; padding-right: 5px; }
     #home p { margin: 15px 0; line-height: 1.6; }
     #home button {
-      padding: 10px 25px; background: #007bff; border: none; color: #fff;
-      border-radius: 25px; cursor: pointer; transition: 0.3s;
+      padding: 10px 20px; background: #007bff; border: none; color: #fff;
+      border-radius: 25px; cursor: pointer; transition: 0.3s; font-size: 1rem;
     }
     #home button:hover { background: #0056b3; }
-    #home img { width: 300px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-    
+    #home img { width: 260px; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
     /* ===== Section Styling ===== */
-    section { padding: 80px 10%; }
-    section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #004a7c; }
+    section { padding: 60px 8%; }
+    section h2 { text-align: center; font-size: 1.8rem; margin-bottom: 30px; color: #004a7c; }
 
     /* ===== About ===== */
     #about p { text-align: center; max-width: 800px; margin: auto; line-height: 1.6; }
 
     /* ===== Skills ===== */
     .skills-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px; text-align: center;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px; text-align: center;
     }
     .skill {
-      padding: 20px; background: #f1f9ff; border-radius: 12px;
+      padding: 15px; background: #f1f9ff; border-radius: 12px;
       transition: 0.3s; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      font-size: 0.9rem;
     }
     .skill:hover { background: #e0f0ff; transform: translateY(-5px); }
 
     /* ===== Projects ===== */
-    #projects{ padding:10px; border-radius: 20px; }
-    .projects { display: flexbox; justify-items: center; }
+    .projects { display: grid; gap: 15px; }
     .project {
-      background: #fff; 
-      padding: 20px;
-      border-radius: 12px;
-      width:1000px;
+      background: #fff; padding: 20px; border-radius: 12px;
+      width: 100%; max-width: 600px; margin: auto;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: 0.5s;
-      text-align: center;
+      transition: 0.3s; text-align: center;
     }
-    .project:hover { transform: translateY(-5px); background:lightskyblue; }
+    .project:hover { transform: translateY(-5px); background: lightskyblue; }
 
     /* ===== Contact ===== */
-    .contacts { display: flexbox; justify-items: center; }
-    .contact{
-      background: #fff; 
-      padding: 20px;
-      border-radius: 12px;
-      width:700px;
-      background-color:white;
+    .contacts, .contactsss { display: grid; gap: 15px; justify-content: center; }
+    .contact, .contactss {
+      background: #fff; padding: 15px; border-radius: 12px;
+      width: 100%; max-width: 400px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: 0.5s;
-      text-align: center;
+      transition: 0.3s; text-align: center;
     }
-    .contact:hover { transform: translateY(-5px); background:lightskyblue; }
-
-    .contactsss { display: flexbox; justify-items: center; }
-    .contactss{
-      background: #fff; 
-      padding: 20px;
-      border-radius: 12px;
-      width:500px;
-      background-color:lightskyblue;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: 0.5s;
-      text-align: center;
-    }
-    .contactss:hover { transform: translateY(-5px); background:rgb(113, 113, 230); }
+    .contact:hover { background: lightskyblue; }
+    .contactss { background: lightskyblue; }
+    .contactss:hover { background: rgb(113, 113, 230); }
 
     /* ===== Footer ===== */
     footer {
-      background: #004a7c; color: #fff; text-align: center;
-      padding: 20px;
+      background: #004a7c; color: #fff; text-align: center; padding: 20px;
     }
 
     /* ===== Responsive ===== */
     @media (max-width: 900px) {
       nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 10%;
-        background: #fff;
-        flex-direction: column;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        display: none; position: absolute; top: 60px; right: 8%;
+        background: #fff; flex-direction: column; padding: 15px;
+        border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       }
-      nav.show {
-        display: flex;
-      }
-      .menu-toggle {
-        display: block;
-      }
+      nav.show { display: flex; }
+      .menu-toggle { display: block; }
     }
-
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
+      #welcome h1 { font-size: 1.6rem; }
       #home { flex-direction: column; text-align: center; }
-      #home .text, #home img { max-width: 100%; }
+      #home img { width: 200px; margin-top: 20px; }
+      section h2 { font-size: 1.5rem; }
+      #home h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -204,15 +152,13 @@
   <!-- Welcome Page -->
   <div id="welcome">
     <h1>Welcome to My Portfolio</h1>
-    
     <button id="enterBtn">See my portfolio</button>
-
     <div class="welcome-links">
       <a href="https://www.linkedin.com/in/reshavpratap" target="_blank">🔗 LinkedIn</a>
       <a href="https://www.instagram.com/reshavpratap" target="_blank">📸 Instagram</a>
       <a href="https://www.facebook.com/reshavpratap" target="_blank">📘 Facebook</a>
       <a href="https://twitter.com/reshavpratap" target="_blank">🐦 Twitter</a>
-      <a href="certificate .html">🏅 Certificate</a>
+      <a href="certificate.html">🏅 Certificate</a>
     </div>
   </div>
 
@@ -238,8 +184,8 @@
       <h1>Hii, I'm <span>Reshav Pratap</span></h1>
       <h2><span id="typing"></span></h2>
       <p>I am a passionate full-stack developer and engineering student who loves solving problems, building web apps, and exploring new technologies.</p>
-      <button>Doton>
-    </div>wnload Resume</div>
+      <a href="resume.pdf" download><button>Download Resume</button></a>
+    </div>
     <img src="WhatsApp Image 2025-09-13 at 01.19.21_f17fe60a.jpg" alt="Profile Photo">
   </section>
 
@@ -253,7 +199,7 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
-      <div class="skill"><strong>Java</strong><br>(<i>i have done java with great learning </i>)</div>
+      <div class="skill"><strong>Java</strong><br>(<i>Completed Java with Great Learning</i>)</div>
       <div class="skill">C</div>
       <div class="skill">HTML & CSS</div>
       <div class="skill">JavaScript</div>
@@ -272,10 +218,10 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="projects">
-      <div class="project">📚 Library Management System Website</div><br>
-      <div class="project">🛒 E-commerce Cart System</div><br>
-      <div class="project">🔄 Swap Shop Website</div><br>
-      <div class="project">⚙️ Digital Logic Design Simulator</div><br>
+      <div class="project">📚 Library Management System Website</div>
+      <div class="project">🛒 E-commerce Cart System</div>
+      <div class="project">🔄 Swap Shop Website</div>
+      <div class="project">⚙️ Digital Logic Design Simulator</div>
       <div class="project">🔐 Cybersecurity Awareness Demo</div>
     </div>
   </section>
@@ -290,10 +236,10 @@
   <section id="certificates">
     <h2>Certificates & Achievements</h2>
     <div class="contactsss">
-      <div class="contactss"><a href="4.pdf">1. Oracle AI Certificate</a></div><br>
-      <div class="contactss"><a href="2.pdf">2. Oracle Cloud Certificate</a></div><br>
-      <div class="contactss"><a href="1.pdf">3. HTML and CSS Certificate</a></div><br>
-      <div class="contactss"><a href="3.pdf">4. Java Certificate</a></div><br>
+      <div class="contactss"><a href="4.pdf">1. Oracle AI Certificate</a></div>
+      <div class="contactss"><a href="2.pdf">2. Oracle Cloud Certificate</a></div>
+      <div class="contactss"><a href="1.pdf">3. HTML and CSS Certificate</a></div>
+      <div class="contactss"><a href="3.pdf">4. Java Certificate</a></div>
     </div>
   </section>
 
@@ -307,19 +253,19 @@
   <section id="contact">
     <h2>Contact</h2>
     <div class="contacts">
-      <div class="contact"><a href="">See my LinkedIn</a></div><br>
-      <div class="contact"><a href="">See my Instagram</a></div><br>
-      <div class="contact"><a href="">See my Facebook</a></div><br>
-      <div class="contact"><a href="">See my Twitter</a></div><br>
+      <div class="contact"><a href="https://www.linkedin.com/in/reshavpratap">See my LinkedIn</a></div>
+      <div class="contact"><a href="https://www.instagram.com/reshavpratap">See my Instagram</a></div>
+      <div class="contact"><a href="https://www.facebook.com/reshavpratap">See my Facebook</a></div>
+      <div class="contact"><a href="https://twitter.com/reshavpratap">See my Twitter</a></div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Reshav Pratap <br> All Rights Reserved <br>share your knowledge</p>
+    <p>© 2026 Reshav Pratap <br> All Rights Reserved <br> Share your knowledge</p>
   </footer>
 
-  <!-- JS for Welcome Page, Typing, and Navbar -->
+  <!-- JS -->
   <script>
     // Welcome Page
     document.getElementById("enterBtn").onclick = () => {
@@ -333,13 +279,8 @@
     function type() {
       current = text[i];
       document.getElementById("typing").innerHTML = current.substring(0, j);
-      if (!isDeleting && j++ === current.length) { 
-        isDeleting = true; 
-      }
-      else if (isDeleting && j-- === 0) { 
-        isDeleting = false; 
-        i = (i+1)%text.length; 
-      }
+      if (!isDeleting && j++ === current.length) { isDeleting = true; }
+      else if (isDeleting && j-- === 0) { isDeleting = false; i = (i+1)%text.length; }
       setTimeout(type, 200);
     }
     type();
@@ -347,9 +288,8 @@
     // Navbar toggle
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("header nav");
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("show");
-    });
+    menuToggle.addEventListener("click", () => { nav.classList.toggle("show"); });
   </script>
 </body>
 </html>
+
